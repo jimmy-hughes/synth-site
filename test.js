@@ -2,6 +2,10 @@
 //       change to noLoop() and redraw() only when freq or modulation changes?
 //       display output (use fft or math?)
 
+// Nexus colors
+let accent = "#0057ffff";
+let fill = "#fff8e4ff";
+
 let mod = new p5.Oscillator('sine');
 mstate = {
   freq: 20,
@@ -29,6 +33,7 @@ car.freq(cstate.freq);
 car.amp(cstate.amp);
 
 $(document).ready(function(){
+  // Modulator Osc Dials
   $("#mmute").click(function(){
     mstate.mute = !mstate.mute;
     if (!mstate.mute) {
@@ -44,7 +49,7 @@ $(document).ready(function(){
   })
 
   var mfreq = Nexus.Add.Dial('#mfreq',{
-    'size': [100,100],
+    'size': [80,80],
     'min': mstate.minf,
     'max': mstate.maxf,
     'value': mstate.freq,
@@ -53,8 +58,8 @@ $(document).ready(function(){
     mstate.freq = v;
     mod.freq(v);
   });
-  mfreq.colorize("accent","#0057ffff")
-  mfreq.colorize("fill","#fff8e4ff")
+  mfreq.colorize("accent",accent)
+  mfreq.colorize("fill",fill)
 
   var mamp = Nexus.Add.Dial('#mamp',{
     'size': [40,40],
@@ -66,9 +71,10 @@ $(document).ready(function(){
     mstate.amp = v;
     mod.amp(v);
   });
-  mamp.colorize("accent","#0057ffff")
-  mamp.colorize("fill","#fff8e4ff")
+  mamp.colorize("accent",accent)
+  mamp.colorize("fill",fill)
 
+  // Carrier Osc Dials
   $("#cmute").click(function(){
     cstate.mute = !cstate.mute;
     if (!cstate.mute) {
@@ -82,7 +88,7 @@ $(document).ready(function(){
   })
 
   var cfreq = Nexus.Add.Dial('#cfreq',{
-    'size': [100,100],
+    'size': [80,80],
     'min': cstate.minf,
     'max': cstate.maxf,
     'value': cstate.freq
@@ -91,8 +97,8 @@ $(document).ready(function(){
     cstate.freq = v;
     car.freq(v);
   });
-  cfreq.colorize("accent","#0057ffff")
-  cfreq.colorize("fill","#fff8e4ff")
+  cfreq.colorize("accent",accent)
+  cfreq.colorize("fill",fill)
 
   var camp = Nexus.Add.Dial('#camp',{
     'size': [40,40],
@@ -104,8 +110,33 @@ $(document).ready(function(){
     cstate.amp = v;
     car.amp(v);
   });
-  camp.colorize("accent","#0057ffff")
-  camp.colorize("fill","#fff8e4ff")
+  camp.colorize("accent",accent)
+  camp.colorize("fill",fill)
+
+  // VCA Dials
+  var cvatt = Nexus.Add.Dial('#cvAttDial',{
+    'size': [50,50],
+  });
+  cvatt.colorize("accent",accent)
+  cvatt.colorize("fill",fill)
+
+  var base = Nexus.Add.Dial('#baseDial',{
+    'size': [50,50],
+  });
+  base.colorize("accent",accent)
+  base.colorize("fill",fill)
+
+  var vol = Nexus.Add.Dial('#volDial',{
+    'size': [50,50],
+  });
+  vol.colorize("accent",accent)
+  vol.colorize("fill",fill)
+
+  // Patch Cables
+  var startElement = document.getElementById('mfreq'),
+  endElement = document.getElementById('cfreq');
+  // New leader line has red color and size 8.
+  new LeaderLine(startElement, endElement, {color: 'red', size: 8});
 })
 
 // Modulator Oscilloscope

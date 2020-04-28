@@ -12,6 +12,9 @@
    version="1.1"
    id="svg70"
    sodipodi:docname="osc.svg"
+   inkscape:export-filename="/home/jimmy/Documents/repos/synth-site/osc.png"
+   inkscape:export-xdpi="163.83652"
+   inkscape:export-ydpi="163.83652"
    inkscape:version="0.92.4 (fd57863, 2020-04-02)">
   <metadata
      id="metadata74">
@@ -21,7 +24,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -32,15 +35,15 @@
      objecttolerance="10"
      gridtolerance="10"
      guidetolerance="10"
-     inkscape:pageopacity="0"
+     inkscape:pageopacity="1"
      inkscape:pageshadow="2"
      inkscape:window-width="1920"
      inkscape:window-height="1025"
      id="namedview72"
      showgrid="false"
-     inkscape:zoom="3.4611055"
-     inkscape:cx="-2.513349"
-     inkscape:cy="79.787427"
+     inkscape:zoom="9.7894849"
+     inkscape:cx="74.975353"
+     inkscape:cy="143.27514"
      inkscape:window-x="0"
      inkscape:window-y="27"
      inkscape:window-maximized="1"
@@ -113,15 +116,6 @@
        r="8.1906672"
        gradientTransform="matrix(1,0,0,0.48168647,0,4.1067706)"
        gradientUnits="userSpaceOnUse" />
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#linear-gradient"
-       id="linearGradient4694"
-       gradientUnits="userSpaceOnUse"
-       x1="83.2"
-       y1="149.93"
-       x2="102.47"
-       y2="163.28" />
   </defs>
   <g
      id="Layer_2"
@@ -129,6 +123,18 @@
     <g
        id="Layer_1-2"
        data-name="Layer 1">
+      <text
+         class="cls-8"
+         id="text52-1"
+         style="font-size:8px;font-family:EurostileCon-Reg, 'Eurostile Cond';opacity:1;fill:#0057ff;fill-opacity:1;stroke:#0057ff;stroke-opacity:1"
+         x="55.066666"
+         y="77.210335"
+         inkscape:export-xdpi="163.83701"
+         inkscape:export-ydpi="163.83701">
+        <tspan
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.33333397px;font-family:'Ubuntu Mono';-inkscape-font-specification:'Ubuntu Mono';fill:#0057ff;fill-opacity:1;stroke:#0057ff;stroke-opacity:1"
+           id="tspan3830-8">FREQ</tspan>
+      </text>
       <path
          class="cls-1"
          d="M80.8,7.68h33.49a8,8,0,0,1,8,8V177.79a8,8,0,0,1-8,8H15a8,8,0,0,1-8-8V15.68a8,8,0,0,1,8-8H48.8"
@@ -138,7 +144,7 @@
          class="cls-3"
          points="85.26,165.57 96.98,165.57 102.85,155.42 96.98,145.26 85.26,145.26 79.4,155.42 "
          id="polygon24"
-         style="fill:url(#linearGradient4694)"
+         style="fill:#a3a3a3;fill-opacity:0.68235296"
          transform="translate(0,-6)" />
       <circle
          class="cls-4"
@@ -151,7 +157,7 @@
          class="cls-5"
          points="31.59,165.57 43.31,165.57 49.17,155.42 43.31,145.26 31.59,145.26 25.73,155.42 "
          id="polygon28"
-         style="fill:url(#linear-gradient-2)"
+         style="fill:#a3a3a3;fill-opacity:0.68235296"
          transform="translate(0,-6)" />
       <circle
          class="cls-4"
@@ -164,7 +170,7 @@
          class="cls-6"
          points="85.26,117.16 96.98,117.16 102.85,107.01 96.98,96.86 85.26,96.86 79.4,107.01 "
          id="polygon32"
-         style="fill:url(#linear-gradient-3)"
+         style="fill:#a3a3a3;fill-opacity:0.68075114"
          transform="translate(0,-6)" />
       <circle
          class="cls-4"
@@ -232,7 +238,7 @@
          inkscape:connector-curvature="0" />
       <path
          style="fill:none;stroke:#f9f9f9;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         d="m 83.716027,172.70749 3.828257,-5.56182 7.345113,8.66775 4.261645,-5.20064"
+         d="m 83.643796,172.49079 3.900488,-5.27289 7.634038,8.59552 3.39487,-4.33387"
          id="path4700"
          inkscape:connector-curvature="0"
          sodipodi:nodetypes="cccc" />
