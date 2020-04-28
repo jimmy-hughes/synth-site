@@ -16,6 +16,23 @@
         border: 5px solid black;
         background-color: red;
       }
+      .module {
+        width: 200px;
+        height: 312px;
+        position: relative;
+      }
+      .freqDial {
+        position: absolute;
+        left: 50px;
+        top: 20px;
+        /* padding: 5px; */
+      }
+      .ampDial {
+        position: absolute;
+        left: 33px;
+        top: 146px;
+        /* padding: 5px; */
+      }
     </style>
     <!-- p5 -->
     <script src="p5/p5.js"></script>
@@ -42,10 +59,11 @@
           <div id='mmute' class="muteBox"></div>
           Oscilloscope
           <div id="moscil"></div>
-          Frequency
-          <div id='mfreq'></div>
-          Amplitude
-          <div id='mamp'></div>
+          <div class="module">
+            <div class="freqDial" id="mfreq"></div>
+            <div class="ampDial" id='mamp'></div>
+            <img src='osc.png'>
+          </div>
         </div>
         <!-- Carrier -->
         <div class="col">
@@ -53,10 +71,11 @@
           <div id='cmute' class="muteBox"></div>
           Oscilloscope
           <div id="coscil"></div>
-          Frequency
-          <div id='cfreq'></div>
-          Amplitude
-          <div id='camp'></div>
+          <div class="module">
+            <div class="freqDial" id="cfreq"></div>
+            <div class="ampDial" id='camp'></div>
+            <img src='osc.png'>
+          </div>
         </div>
         <div class="col">
           Master Output

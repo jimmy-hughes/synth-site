@@ -47,15 +47,17 @@ $(document).ready(function(){
     'size': [100,100],
     'min': mstate.minf,
     'max': mstate.maxf,
-    'value': mstate.freq
+    'value': mstate.freq,
   });
   mfreq.on('change',function(v) {
     mstate.freq = v;
     mod.freq(v);
   });
+  mfreq.colorize("accent","#0057ffff")
+  mfreq.colorize("fill","#fff8e4ff")
 
   var mamp = Nexus.Add.Dial('#mamp',{
-    'size': [100,100],
+    'size': [40,40],
     'min': mstate.mina,
     'max': mstate.maxa,
     'value': mstate.amp
@@ -64,6 +66,8 @@ $(document).ready(function(){
     mstate.amp = v;
     mod.amp(v);
   });
+  mamp.colorize("accent","#0057ffff")
+  mamp.colorize("fill","#fff8e4ff")
 
   $("#cmute").click(function(){
     cstate.mute = !cstate.mute;
@@ -87,9 +91,11 @@ $(document).ready(function(){
     cstate.freq = v;
     car.freq(v);
   });
+  cfreq.colorize("accent","#0057ffff")
+  cfreq.colorize("fill","#fff8e4ff")
 
   var camp = Nexus.Add.Dial('#camp',{
-    'size': [100,100],
+    'size': [40,40],
     'min': cstate.mina,
     'max': cstate.maxa,
     'value': cstate.amp
@@ -98,6 +104,8 @@ $(document).ready(function(){
     cstate.amp = v;
     car.amp(v);
   });
+  camp.colorize("accent","#0057ffff")
+  camp.colorize("fill","#fff8e4ff")
 })
 
 // Modulator Oscilloscope
