@@ -61,18 +61,11 @@ $(document).ready(function(){
   mfreq.colorize("accent",accent)
   mfreq.colorize("fill",fill)
 
-  var mamp = Nexus.Add.Dial('#mamp',{
+  var mcv = Nexus.Add.Dial('#mcv',{
     'size': [40,40],
-    'min': mstate.mina,
-    'max': mstate.maxa,
-    'value': mstate.amp
   });
-  mamp.on('change',function(v) {
-    mstate.amp = v;
-    mod.amp(v);
-  });
-  mamp.colorize("accent",accent)
-  mamp.colorize("fill",fill)
+  mcv.colorize("accent",accent)
+  mcv.colorize("fill",fill)
 
   // Carrier Osc Dials
   $("#cmute").click(function(){
@@ -100,18 +93,18 @@ $(document).ready(function(){
   cfreq.colorize("accent",accent)
   cfreq.colorize("fill",fill)
 
-  var camp = Nexus.Add.Dial('#camp',{
+  var ccv = Nexus.Add.Dial('#ccv',{
     'size': [40,40],
-    'min': cstate.mina,
-    'max': cstate.maxa,
-    'value': cstate.amp
+    'min': mstate.mina,
+    'max': mstate.maxa,
+    'value': mstate.amp
   });
-  camp.on('change',function(v) {
-    cstate.amp = v;
-    car.amp(v);
+  ccv.on('change',function(v) {
+    mstate.amp = v;
+    mod.amp(v);
   });
-  camp.colorize("accent",accent)
-  camp.colorize("fill",fill)
+  ccv.colorize("accent",accent)
+  ccv.colorize("fill",fill)
 
   // VCA Dials
   var cvatt = Nexus.Add.Dial('#cvAttDial',{
@@ -128,9 +121,29 @@ $(document).ready(function(){
 
   var vol = Nexus.Add.Dial('#volDial',{
     'size': [50,50],
+    'min': cstate.mina,
+    'max': cstate.maxa,
+    'value': cstate.amp
+  });
+  vol.on('change',function(v) {
+    cstate.amp = v;
+    car.amp(v);
   });
   vol.colorize("accent",accent)
   vol.colorize("fill",fill)
+
+    // var camp = Nexus.Add.Dial('#camp',{
+  //   'size': [40,40],
+    // 'min': cstate.mina,
+    // 'max': cstate.maxa,
+    // 'value': cstate.amp
+  // });
+  // camp.on('change',function(v) {
+  //   cstate.amp = v;
+  //   car.amp(v);
+  // });
+  // camp.colorize("accent",accent)
+  // camp.colorize("fill",fill)
 
   // Patch Cables
   var startElement = document.getElementById('mfreq'),
