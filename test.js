@@ -132,23 +132,12 @@ $(document).ready(function(){
   vol.colorize("accent",accent)
   vol.colorize("fill",fill)
 
-    // var camp = Nexus.Add.Dial('#camp',{
-  //   'size': [40,40],
-    // 'min': cstate.mina,
-    // 'max': cstate.maxa,
-    // 'value': cstate.amp
-  // });
-  // camp.on('change',function(v) {
-  //   cstate.amp = v;
-  //   car.amp(v);
-  // });
-  // camp.colorize("accent",accent)
-  // camp.colorize("fill",fill)
-
   // Patch Cables
-  var startElement = document.getElementById('mfreq'),
-  endElement = document.getElementById('cfreq');
-  // New leader line has red color and size 8.
+  var startElement = document.getElementById('mSinPoint'),
+  endElement = document.getElementById('cCVPoint');
+  new LeaderLine(startElement, endElement, {color: 'red', size: 8});
+  var startElement = document.getElementById('cSinPoint'),
+  endElement = document.getElementById('inPoint');
   new LeaderLine(startElement, endElement, {color: 'red', size: 8});
 })
 
