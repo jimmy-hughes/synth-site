@@ -1,10 +1,21 @@
 // todo: 
 //       change to noLoop() and redraw() only when freq or modulation changes?
-//       display output (use fft or math?)
+//       display output using math instead of fft?
 
 // Nexus colors
 let accent = "#0057ffff";
 let fill = "#fff8e4ff";
+
+// Patching
+let firstPoint = "";
+let connections = {
+  "mSinPoint": "",
+  "mCVPoint": "",
+  "cSinPoint": "",
+  "cCVPoint": "",
+  "inPoint": ""
+};
+let cables = {};
 
 let mod = new p5.Oscillator('sine');
 mstate = {
@@ -32,22 +43,8 @@ cstate = {
 car.freq(cstate.freq);
 car.amp(cstate.amp);
 
-$(document).ready(function(){
+var displayDials = function(){
   // Modulator Osc Dials
-  $("#mmute").click(function(){
-    mstate.mute = !mstate.mute;
-    if (!mstate.mute) {
-      mod.start();
-      mod.disconnect();
-      car.freq(mod);
-      $("#mmute").css("background-color","white")
-    }
-    else {
-      mod.stop();
-      $("#mmute").css("background-color","red")
-    }
-  })
-
   var mfreq = Nexus.Add.Dial('#mfreq',{
     'size': [80,80],
     'min': mstate.minf,
@@ -68,18 +65,6 @@ $(document).ready(function(){
   mcv.colorize("fill",fill)
 
   // Carrier Osc Dials
-  $("#cmute").click(function(){
-    cstate.mute = !cstate.mute;
-    if (!cstate.mute) {
-      car.start();
-      $("#cmute").css("background-color","white")
-    }
-    else {
-      car.stop();
-      $("#cmute").css("background-color","red")
-    }
-  })
-
   var cfreq = Nexus.Add.Dial('#cfreq',{
     'size': [80,80],
     'min': cstate.minf,
@@ -131,14 +116,127 @@ $(document).ready(function(){
   });
   vol.colorize("accent",accent)
   vol.colorize("fill",fill)
+}
 
-  // Patch Cables
-  var startElement = document.getElementById('mSinPoint'),
-  endElement = document.getElementById('cCVPoint');
-  new LeaderLine(startElement, endElement, {color: 'red', size: 8});
-  var startElement = document.getElementById('cSinPoint'),
-  endElement = document.getElementById('inPoint');
-  new LeaderLine(startElement, endElement, {color: 'red', size: 8});
+var connectMod = function(){
+  mod.start();
+  mod.disconnect();
+  car.freq(mod);
+}
+
+var disconnectMod = function(){
+  mod.stop();
+}
+
+var connectCar = function(){
+  car.start();
+}
+
+var disconnectCar = function(){
+  car.stop();
+}
+
+var connectP5 = function(pt1, pt2){
+  if ((pt1=="mSinPoint" && pt2=="cCVPoint") || (pt2=="mSinPoint" && pt1=="cCVPoint"))
+    connectMod();
+  else if ((pt1=="cSinPoint" && pt2=="inPoint") || (pt2=="cSinPoint" && pt1=="inPoint"))
+    connectCar();
+}
+
+var disconnectP5 = function(pt1, pt2){
+  if ((pt1=="mSinPoint" && pt2=="cCVPoint") || (pt2=="mSinPoint" && pt1=="cCVPoint"))
+    disconnectMod();
+  else if ((pt1=="cSinPoint" && pt2=="inPoint") || (pt2=="cSinPoint" && pt1=="inPoint"))
+    disconnectCar();
+}
+
+var drawCable = function(pt1, pt2) {
+  var startElement = document.getElementById(pt1),
+  endElement = document.getElementById(pt2);
+  var line = new LeaderLine(startElement, endElement, {color: 'red', size: 8});
+  cables[pt1+pt2] = line;
+}
+
+var removeCable = function(pt1, pt2) {
+  if ((pt1+pt2) in cables){
+    cables[pt1+pt2].remove();
+    delete cables[pt1+pt2];
+  }  
+  else if ((pt2+pt1) in cables){
+    cables[pt2+pt1].remove();
+    delete cables[pt2+pt1];
+  }
+}
+
+var drawCircle = function(point){
+  $("#"+point).css({"border":"solid","border-color":"red"});
+}
+
+var removeCircle = function(point){
+  $("#"+point).css("border","none");
+}
+
+var connect = function(pt1, pt2){
+  if (pt1 != pt2) {
+    connectP5(pt1,pt2);
+    drawCable(pt1, pt2);
+    connections[pt1] = pt2;
+    connections[pt2] = pt1;
+  }  
+  firstPoint = "";
+  removeCircle(pt1);
+}
+
+var disconnect = function(pt1, pt2){
+  disconnectP5(pt1,pt2);
+  removeCable(pt1,pt2);
+  connections[pt1] = "";
+  connections[pt2] = "";
+}
+
+var handlePatch = function(point){
+  // if user clicks on patched point remove patch
+  if (connections[point] != "") {
+    disconnect(point, connections[point])
+  }
+
+  if (firstPoint == ""){
+    firstPoint = point;
+    drawCircle(point);
+  }
+  else {
+    connect(firstPoint, point)
+  }
+}
+
+$(document).ready(function(){
+  displayDials();
+
+  // Patching 
+  $("#mSinPoint").click(function() {
+    handlePatch("mSinPoint");
+  });
+
+  $("#mCVPoint").click(function() {
+    handlePatch("mCVPoint");
+  });
+
+  $("#cSinPoint").click(function() {
+    handlePatch("cSinPoint");
+  });
+
+  $("#cCVPoint").click(function() {
+    handlePatch("cCVPoint");
+  });
+
+  $("#inPoint").click(function() {
+    handlePatch("inPoint");
+  });
+
+
+  // Maunally Draw Patch Cables
+  // drawCable('mSinPoint','cCVPoint');
+  // drawCable('cSinPoint','inPoint');
 })
 
 // Modulator Oscilloscope
