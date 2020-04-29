@@ -5,6 +5,8 @@
 // Nexus colors
 let accent = "#0057ffff";
 let fill = "#fff8e4ff";
+// Cable colors
+let red = "#ff5542"
 
 // Patching
 let firstPoint = "";
@@ -153,7 +155,7 @@ var disconnectP5 = function(pt1, pt2){
 var drawCable = function(pt1, pt2) {
   var startElement = document.getElementById(pt1),
   endElement = document.getElementById(pt2);
-  var line = new LeaderLine(startElement, endElement, {color: 'red', size: 8});
+  var line = new LeaderLine(startElement, endElement, {color: red, size: 6, endPlug: 'behind'});
   cables[pt1+pt2] = line;
 }
 
@@ -169,7 +171,7 @@ var removeCable = function(pt1, pt2) {
 }
 
 var drawCircle = function(point){
-  $("#"+point).css({"border":"solid","border-color":"red"});
+  $("#"+point).css({"border":"solid","border-color":red});
 }
 
 var removeCircle = function(point){
@@ -242,7 +244,7 @@ $(document).ready(function(){
 // Modulator Oscilloscope
 let a = function(p){
   p.setup = function(){
-    p.createCanvas(300, 200);
+    p.createCanvas(200, 150);
     p.noFill();
     p.frameRate(24);
   };
@@ -251,13 +253,13 @@ let a = function(p){
     amp = mstate.amp;
     xspacing = Math.floor(freq*20);
     wave = new Array(xspacing+1);
-    p.background(30);
+    p.background(255);
     // calculate sine wave points
     for (let i=0; i<wave.length; i++) {
       wave[i] = amp*p.sin(i*p.TWO_PI/(10*xspacing)*freq);
     }
     // draw the wave
-    p.stroke(255);
+    p.stroke(red);
     p.strokeWeight(5);
     p.beginShape();
     for (let i = 0; i < wave.length; i++) {
@@ -273,7 +275,7 @@ new p5(a, 'moscil');
 // Carrier Oscilloscope
 let b = function(p){
   p.setup = function(){
-    p.createCanvas(300, 200);
+    p.createCanvas(200, 150);
     p.noFill();
     p.frameRate(24);
   };
@@ -282,13 +284,13 @@ let b = function(p){
     amp = cstate.amp;
     xspacing = Math.floor(freq/2);
     wave = new Array(xspacing+1);
-    p.background(30);
+    p.background(255);
     // calculate sine wave points
     for (let i=0; i<wave.length; i++) {
       wave[i] = amp*p.sin(i*p.TWO_PI/(100*xspacing)*freq);
     }
     // draw the wave
-    p.stroke(255);
+    p.stroke(red);
     p.strokeWeight(5);
     p.beginShape();
     for (let i = 0; i < wave.length; i++) {
@@ -304,16 +306,16 @@ new p5(b, 'coscil');
 // Original Carrier Oscilloscope
 let c = function(p){
   p.setup = function(){
-    p.createCanvas(400, 200);
+    p.createCanvas(200, 150);
     p.noFill();
     p.frameRate(12);
     analyzer = new p5.FFT();
   };
   p.draw = function(){
-    p.background(30);
+    p.background(255);
     waveform = analyzer.waveform();
     // draw the shape of the waveform
-    p.stroke(255);
+    p.stroke(red);
     p.strokeWeight(5);
     p.beginShape();
     for (let i = 0; i < waveform.length; i++) {
