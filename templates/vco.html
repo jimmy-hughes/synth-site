@@ -1,0 +1,28 @@
+{% extends "template.html" %}
+
+{% block js %}
+	<script type="text/javascript" src="{{ url_for('static', filename = 'vco.js') }}"></script>
+{% endblock %}
+
+{% block vars %}
+{% endblock %}
+
+{% block content %}
+	<br>
+	<div> 
+		<h2> Module 1: Voltage Control Oscillator</h2> 
+		<br>
+		<p>
+			This module simply creates a sine wave current. The user can adjust the frequency using the frequency knob.
+		</p>
+		<p>
+			Insert vco and oscilloscope here
+		</p>
+		<p>
+			Turn sound on!
+		</p>
+	</div>
+	<br>
+	<button id="nextButton" class="btn btn-primary">Next</button>
+	<button id="backButton" class="btn btn-primary">Back</button>
+{% endblock %}

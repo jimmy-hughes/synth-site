@@ -11,6 +11,26 @@ def home():
 def quiz():
 	return render_template('quiz.html')
 
+@app.route('/mod1')
+def mod1():
+	return render_template('mod1.html')
+
+@app.route('/mod2')
+def mod2():
+	return render_template('mod2.html')
+
+@app.route('/vco')
+def vco():
+	return render_template('vco.html')
+
+@app.route('/vca')
+def vca():
+	return render_template('vca.html')
+
+@app.route('/fm')
+def fm():
+	return render_template('fm.html')
+
 if __name__ == '__main__':
    app.run(debug = True)
 
