@@ -1,0 +1,45 @@
+{% extends "template.html" %}
+
+{% block js %}
+	<script type="text/javascript" src="{{ url_for('static', filename = 'quiz.js') }}"></script>
+{% endblock %}
+
+{% block content %}
+  <div class="container">
+    <div class="row">
+      <!-- Modulator -->
+      <div class="col">
+        <div class="module">
+          <div class="freqDial" id="mfreq"></div>
+          <div class="ampDial" id="mcv"></div>
+          <img src="{{url_for('static', filename='img/osc.png')}}"/>
+          <button class="sin" id="mSinPoint"></button>
+          <button class="cv" id="mCVPoint"></button>
+        </div>
+        <div id="moscil" style="padding-top: 40px;"></div>
+      </div>
+      <!-- Carrier -->
+      <div class="col">
+        <div class="module">
+          <div class="freqDial" id="cfreq"></div>
+          <div class="ampDial" id='ccv'></div>
+          <img src="{{url_for('static', filename='img/osc.png')}}"/>
+          <button class="sin" id="cSinPoint"></button>
+          <button class="cv" id="cCVPoint"></button>
+        </div>
+        <div id="coscil" style="padding-top: 40px;"></div>
+      </div>
+      <!-- VCA -->
+      <div class="col">
+        <div class="module">
+          <div class="cvAttDial" id="cvAttDial"></div>
+          <div class="baseDial" id="baseDial"></div>
+          <div class="volDial" id='volDial'></div>
+          <img src="{{url_for('static', filename='img/vca.png')}}"/>
+          <button class="in" id="inPoint"></button>
+        </div>
+        <div id="masteroscil" style="padding-top: 40px;"></div>
+      </div>
+    </div>
+  </div>
+{% endblock %}

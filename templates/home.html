@@ -1,0 +1,20 @@
+{% extends "template.html" %}
+
+{% block js %}
+	<script type="text/javascript" src="{{ url_for('static', filename = 'home.js') }}"></script>
+{% endblock %}
+
+{% block vars %}
+{% endblock %}
+
+{% block content %}
+	<br>
+	<div> 
+		<h2> Frequency Modulation Tutorial </h2> 
+		<br>
+		Learn how to create an frequency modulation patch on a modular synthesizer 
+	</div>
+	<br>
+	<button id="tutorialButton" class="btn btn-primary">Tutorial</button>
+	<button id="quizButton" class="btn btn-primary">Quiz</button>
+{% endblock %}
