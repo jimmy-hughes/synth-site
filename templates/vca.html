@@ -9,20 +9,40 @@
 
 {% block content %}
 	<br>
-	<div> 
-		<h2> Module 2: Voltage Control Amplifier</h2> 
-		<br>
-		<p>
-			This module adjusts the signal output which is the signal that’s sent directly to your speakers.
-		</p>
-		<p>
-			Insert vca and oscilloscope here
-		</p>
-		<p>
-			Turn sound on!
-		</p>
+	<div class="text-center">
+		<h2>Voltage Control Amplifier</h2>
 	</div>
 	<br>
-	<button id="nextButton" class="btn btn-primary">Next</button>
+	<div class="row">
+		This module can perform many functions but for the purpose of this tutorial we are only interested in two aspects:
+	</div>
+	<div class="row">
+		<div class="col">
+			<div class="row" id="pt1">
+				i) Input Patch Point
+				<br>
+				In this exampe we patched a simple sine wave into the input.
+			</div>
+			<div class="row" id="pt2">
+				ii) Volume Knob
+				<br>
+				This will adjust the amplitude of the input signal. Turn this dial to hear and see its effect.
+			</div>
+		</div>
+		<div class="col" style="padding-left: 10%;">
+			<div class="module">
+				<div class="cvAttDial" id="cvAttDial"></div>
+				<div class="baseDial" id="baseDial"></div>
+				<div class="volDial" id='volDial'></div>
+				<img src="{{url_for('static', filename='img/vca.png')}}"/>
+				<button class="in" id="inPoint"></button>
+			</div> 
+		</div>
+		<div class="col">
+			<div id="masteroscil" style="padding-top: 40px;"></div>
+		</div>
+	</div>
+	<br>
 	<button id="backButton" class="btn btn-primary">Back</button>
+	<button id="nextButton" class="btn btn-primary">Next</button>
 {% endblock %}

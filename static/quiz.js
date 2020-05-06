@@ -303,7 +303,7 @@ let b = function(p){
 };
 new p5(b, 'coscil');
 
-// Original Carrier Oscilloscope
+// Master Oscilloscope
 let c = function(p){
   p.setup = function(){
     p.createCanvas(200, 150);

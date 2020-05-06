@@ -7,14 +7,24 @@
 {% block vars %}
 {% endblock %}
 
+{% block style %}
+canvas {
+	border-radius: 12px;
+  }
+{% endblock %}
+
 {% block content %}
 	<br>
-	<div> 
-		<h2> Frequency Modulation Tutorial </h2> 
-		<br>
-		Learn how to create an frequency modulation patch on a modular synthesizer 
+	<div class="col">
+		<div class="text-center">
+			<h2> Frequency Modulation Tutorial </h2> 
+			<br>
+			Learn how to create FM sythnthesis with a modular synthesizer.
+			<br>
+			Click to hear what that sounds like:
+			<div id="masteroscil" style="padding-top: 20px;"></div>
+			<br>
+			<button id="tutorialButton" class="btn btn-primary">Get Started</button>
+		</div>
 	</div>
-	<br>
-	<button id="tutorialButton" class="btn btn-primary">Tutorial</button>
-	<button id="quizButton" class="btn btn-primary">Quiz</button>
 {% endblock %}

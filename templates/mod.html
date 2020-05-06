@@ -1,0 +1,26 @@
+{% extends "template.html" %}
+
+{% block js %}
+	<script type="text/javascript" src="{{ url_for('static', filename = 'mod1.js') }}"></script>
+{% endblock %}
+
+{% block vars %}
+{% endblock %}
+
+{% block content %}
+	<br>
+	<div class="col"></div>
+		<div class="text-center">
+			<h2> What's a modular synthesizer?  </h2> 
+			<br>
+			A modular synthesizer is an electronic instrument composed of separate modules that each perform different functions. 
+			Modules are connected to each other using patch cables.
+			<br>
+			<img src="{{url_for('static', filename='img/synth.jpg')}}"/>
+			<br>
+			To accomplish FM synthesis we will need two different types of modules.
+			<br>
+			<button id="nextButton" class="btn btn-primary">Module 1: VCA</button>
+		</div>
+	</div>
+{% endblock %}

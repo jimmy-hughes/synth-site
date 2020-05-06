@@ -9,20 +9,49 @@
 
 {% block content %}
 	<br>
-	<div> 
-		<h2> Module 1: Voltage Control Oscillator</h2> 
-		<br>
-		<p>
-			This module simply creates a sine wave current. The user can adjust the frequency using the frequency knob.
-		</p>
-		<p>
-			Insert vco and oscilloscope here
-		</p>
-		<p>
-			Turn sound on!
-		</p>
+	<div class="text-center">
+		<h2>Oscillator</h2>
 	</div>
 	<br>
-	<button id="nextButton" class="btn btn-primary">Next</button>
+	<div class="row">
+		Much like the VCA module we will only make use of a number of its features for FM synthesis
+	</div>
+	<div class="row">
+		<div class="col">
+			<div class="row" id="pt1">
+				i) Sine Wave Patch Point  
+				<br>
+				This outputs a sine wave signal. Use this to connect the oscillator to the VCA.
+			</div>
+			<div class="row" id="pt2">
+				ii) Frequency Knob
+				<br>
+				This will adjust the frequency of the sine wave. Turn this dial to hear and see its effect.
+			</div>
+		</div>
+		<div class="col" style="padding-left: 10%;">
+			<div class="module">
+				<div class="freqDial" id="cfreq"></div>
+				<div class="ampDial" id='ccv'></div>
+				<img src="{{url_for('static', filename='img/osc.png')}}"/>
+				<button class="sin" id="cSinPoint"></button>
+				<button class="cv" id="cCVPoint"></button>
+			</div>
+		</div>
+		<div class="col" style="padding-left: 10%;">
+			<div class="module">
+				<div class="cvAttDial" id="cvAttDial"></div>
+				<div class="baseDial" id="baseDial"></div>
+				<div class="volDial" id='volDial'></div>
+				<img src="{{url_for('static', filename='img/vca.png')}}"/>
+				<button class="in" id="inPoint"></button>
+			</div> 
+		</div>
+		<div class="col">
+			<div id="masteroscil" style="padding-top: 40px;"></div>
+		</div>
+	</div>
+	<br>
 	<button id="backButton" class="btn btn-primary">Back</button>
+	<button id="nextButton" class="btn btn-primary">Next</button>
 {% endblock %}
