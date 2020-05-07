@@ -86,10 +86,10 @@ $(document).ready(function(){
 	var line = new LeaderLine(startElement, endElement, {color: red, size: 6});
 
 	$("#nextButton").click(function() {
-    window.location.href="{{ url_for('vco') }}"
+    window.location.href="vco";
 	});
 
 	$("#backButton").click(function() {
-    window.location.href="{{ url_for('mod') }}"
+    window.location.href="mod";
 	});
 })

@@ -43,7 +43,7 @@ $(document).ready(function(){
 	});
 
 	$("#tutorialButton").click(function() {
-    window.location.href="{{ url_for('mod') }}"
+    window.location.href="mod";
 	});
 
 	$("#tutorialButton").hide();
@@ -74,8 +74,3 @@ let c = function(p){
   };
 };
 new p5(c, 'masteroscil');
-
-
-$(document).ready(function(){
-	
-})

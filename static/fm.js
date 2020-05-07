@@ -1,8 +1,8 @@
 $(document).ready(function(){
 	$("#nextButton").click(function() {
-		window.location.href="{{ url_for('quiz') }}"
+		window.location.href="quiz";
 	});
 	$("#backButton").click(function() {
-		window.location.href="{{ url_for('vca') }}"
+		window.location.href="vca";
 	});
 })
