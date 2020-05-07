@@ -4,10 +4,24 @@ let fill = "#fff8e4ff";
 // Cable colors
 let red = "#ff5542"
 
+let step = 1;
+var line = null;
+
+// Patching
+let firstPoint = "";
+let connections = {
+  "mSinPoint": "",
+  "mCVPoint": "",
+  "cSinPoint": "",
+  "cCVPoint": "",
+  "inPoint": ""
+};
+let cables = {};
+
 let car = new p5.Oscillator('sine');
 cstate = {
   freq: 300,
-  amp: 0,
+  amp: 0.8,
   mute: true,
   minf: 100,
   maxf: 1000,
@@ -16,7 +30,6 @@ cstate = {
 }
 car.freq(cstate.freq);
 car.amp(cstate.amp);
-car.start();
 
 var displayDials = function(){
 	// Carrier Osc Dials
@@ -29,6 +42,11 @@ var displayDials = function(){
 	cfreq.on('change',function(v) {
 		cstate.freq = v;
 		car.freq(v);
+		if (step == 4) {
+			line.remove();
+			$("#nextButton").show();
+			step = 5;
+		}
 	});
 	cfreq.colorize("accent",accent)
 	cfreq.colorize("fill",fill)
@@ -68,12 +86,82 @@ var displayDials = function(){
 	vol.colorize("accent",accent)
 	vol.colorize("fill",fill)
 }
+  
+var connectCar = function(){
+car.start();
+}
+
+var disconnectCar = function(){
+car.stop();
+}
+
+var connectP5 = function(pt1, pt2){
+	if ((pt1=="cSinPoint" && pt2=="inPoint") || (pt2=="cSinPoint" && pt1=="inPoint"))
+		connectCar();
+}
+
+var disconnectP5 = function(pt1, pt2){
+	if ((pt1=="cSinPoint" && pt2=="inPoint") || (pt2=="cSinPoint" && pt1=="inPoint"))
+		disconnectCar();
+}
+
+var removeCable = function(pt1, pt2) {
+	if ((pt1+pt2) in cables){
+	  cables[pt1+pt2].remove();
+	  delete cables[pt1+pt2];
+	}  
+	else if ((pt2+pt1) in cables){
+	  cables[pt2+pt1].remove();
+	  delete cables[pt2+pt1];
+	}
+}
 
 var drawCable = function(pt1, pt2) {
   var startElement = document.getElementById(pt1),
   endElement = document.getElementById(pt2);
   var line = new LeaderLine(startElement, endElement, {color: red, size: 6, endPlug: 'behind'});
 }
+
+var drawCircle = function(point){
+	$("#"+point).css({"border":"solid","border-color":red});
+  }
+
+var removeCircle = function(point){
+	$("#"+point).css("border","none");
+  }
+
+  var connect = function(pt1, pt2){
+	if (pt1 != pt2) {
+	  connectP5(pt1,pt2);
+	  drawCable(pt1, pt2);
+	  connections[pt1] = pt2;
+	  connections[pt2] = pt1;
+	}  
+	firstPoint = "";
+	removeCircle(pt1);
+  }
+
+  var disconnect = function(pt1, pt2){
+	disconnectP5(pt1,pt2);
+	removeCable(pt1,pt2);
+	connections[pt1] = "";
+	connections[pt2] = "";
+  }
+
+  var handlePatch = function(point){
+	// if user clicks on patched point remove patch
+	if (connections[point] != "") {
+	  disconnect(point, connections[point])
+	}
+  
+	if (firstPoint == ""){
+	  firstPoint = point;
+	  drawCircle(point);
+	}
+	else {
+	  connect(firstPoint, point)
+	}
+  }
 
 // Master Oscilloscope
 let c = function(p){
@@ -102,19 +190,53 @@ new p5(c, 'masteroscil');
 
 
 $(document).ready(function(){
+	
 	displayDials();
-	var startElement = document.getElementById("pt1"),
+
+	var startElement = document.getElementById("s1"),
 	endElement = document.getElementById("cSinPoint");
-	var line = new LeaderLine(startElement, endElement, {color: red, size: 6});
-	var startElement = document.getElementById("pt2"),
-	endElement = document.getElementById("cfreq");
-	var line = new LeaderLine(startElement, endElement, {color: red, size: 6});
+	line = new LeaderLine(startElement, endElement, {color: red, size: 6});
+	// let s2line = new LeaderLine(startElement, endElement, {color: red, size: 6});
+	// s2line.remove();
+
+	// Patching 	
+	  $("#cSinPoint").click(function() {
+		handlePatch("cSinPoint");
+		if (step < 2){
+			line.remove();
+			$("#s2").show();
+			var startElement = document.getElementById("s2"),
+			endElement = document.getElementById("inPoint");
+			line = new LeaderLine(startElement, endElement, {color: red, size: 6});
+			step = 2;
+		}
+	  });
+	
+	  $("#cCVPoint").click(function() {
+		handlePatch("cCVPoint");
+	  });
+	
+	  $("#inPoint").click(function() {
+		handlePatch("inPoint");
+		if (step < 3){
+			line.remove();
+			$("#pt2").show();
+			var startElement = document.getElementById("pt2"),
+			endElement = document.getElementById("cfreq");
+			line = new LeaderLine(startElement, endElement, {color: red, size: 6});
+			step = 4;
+		}
+	  });
 
 	$("#nextButton").click(function() {
 		window.location.href="fm";
 	});
+	$("#nextButton").hide();
 
 	$("#backButton").click(function() {
 		window.location.href="vca";
 	});
+
+	$("#s2").hide();
+	$("#pt2").hide();
 })
