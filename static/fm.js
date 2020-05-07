@@ -6,7 +6,9 @@
 let accent = "#0057ffff";
 let fill = "#fff8e4ff";
 // Cable colors
-let red = "#ff5542"
+let red = "#ff5542";
+let step = 0;
+let line = null;
 
 // Patching
 let firstPoint = "";
@@ -55,7 +57,15 @@ var displayDials = function(){
   });
   mfreq.on('change',function(v) {
     mstate.freq = v;
-    mod.freq(v);
+	mod.freq(v);
+	if (step == 4){
+		line.remove();
+		$("#s5").show();
+		startElement = document.getElementById("s5"),
+		endElement = document.getElementById("cfreq");
+		line = new LeaderLine(startElement, endElement, {color: red, size: 6});
+		step = 5;
+	}
   });
   mfreq.colorize("accent",accent)
   mfreq.colorize("fill",fill)
@@ -75,7 +85,12 @@ var displayDials = function(){
   });
   cfreq.on('change',function(v) {
     cstate.freq = v;
-    car.freq(v);
+	car.freq(v);
+	if (step == 5){
+		line.remove();
+		$("#nextButton").show();
+		step = 6;
+	}
   });
   cfreq.colorize("accent",accent)
   cfreq.colorize("fill",fill)
@@ -88,7 +103,15 @@ var displayDials = function(){
   });
   ccv.on('change',function(v) {
     mstate.amp = v;
-    mod.amp(v);
+	mod.amp(v);
+	if (step == 3){
+		line.remove();
+		$("#s4").show();
+		startElement = document.getElementById("s4"),
+		endElement = document.getElementById("mfreq");
+		line = new LeaderLine(startElement, endElement, {color: red, size: 6});
+		step = 4;
+	}
   });
   ccv.colorize("accent",accent)
   ccv.colorize("fill",fill)
@@ -114,7 +137,16 @@ var displayDials = function(){
   });
   vol.on('change',function(v) {
     cstate.amp = v;
-    car.amp(v);
+	car.amp(v);
+	if (step == 0){
+		line.remove();
+		$("#pt2").show();
+		$("#s1").show();
+		startElement = document.getElementById("s1"),
+		endElement = document.getElementById("mSinPoint");
+		line = new LeaderLine(startElement, endElement, {color: red, size: 6});
+		step = 1;
+	}
   });
   vol.colorize("accent",accent)
   vol.colorize("fill",fill)
@@ -216,7 +248,15 @@ $(document).ready(function(){
 
   // Patching 
   $("#mSinPoint").click(function() {
-    handlePatch("mSinPoint");
+	handlePatch("mSinPoint");
+	if (step == 1){
+		line.remove();
+		$("#s2").show();
+		startElement = document.getElementById("s2"),
+		endElement = document.getElementById("cCVPoint");
+		line = new LeaderLine(startElement, endElement, {color: red, size: 6});
+		step = 2;
+	}
   });
 
   $("#mCVPoint").click(function() {
@@ -228,7 +268,16 @@ $(document).ready(function(){
   });
 
   $("#cCVPoint").click(function() {
-    handlePatch("cCVPoint");
+	handlePatch("cCVPoint");
+	if (step == 2){
+		line.remove();
+		$("#pt3").show();
+		$("#s3").show();
+		startElement = document.getElementById("s3"),
+		endElement = document.getElementById("ccv");
+		line = new LeaderLine(startElement, endElement, {color: red, size: 6});
+		step = 3;
+	}
   });
 
   $("#inPoint").click(function() {
@@ -247,10 +296,21 @@ $(document).ready(function(){
   // Manually patch osc -> vca
   handlePatch("cSinPoint");
   handlePatch("inPoint");
-})
 
-$(document).ready(function(){
-	
+  // step 0 
+  startElement = document.getElementById("s0"),
+  endElement = document.getElementById("volDial");
+  line = new LeaderLine(startElement, endElement, {color: red, size: 6});
+
+  // hide other steps
+  $("#pt2").hide();
+  $("#pt3").hide();
+  $("#s1").hide();
+  $("#s2").hide();
+  $("#s3").hide();
+  $("#s4").hide();
+  $("#s5").hide();
+  $("#nextButton").hide();
 })
 
 // Modulator Oscilloscope
