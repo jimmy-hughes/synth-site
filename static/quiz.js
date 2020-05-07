@@ -208,6 +208,7 @@ var handlePatch = function(point){
   }
   else {
     connect(firstPoint, point)
+    if (connections["mSinPoint"]=="cCVPoint" && connections["cSinPoint"]=="inPoint") $("#success").show();
   }
 }
 
@@ -234,6 +235,8 @@ $(document).ready(function(){
   $("#inPoint").click(function() {
     handlePatch("inPoint");
   });
+
+  $("#success").hide();
 })
 
 // Modulator Oscilloscope
