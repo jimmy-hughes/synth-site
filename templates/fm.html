@@ -9,26 +9,66 @@
 
 {% block content %}
 	<br>
-	<div> 
-		<div class="text-center">
-			<h2>Frequency Modulation</h2>
-		</div>
-		<br>
-		<p>
+	<div class="text-center">
+		<h2>Frequency Modulation</h2>
+	</div>
+	<br>
+	<div class="row">
+		<h4>
 			We’re almost ready to patch our synth but before we do that we have to talk about what FM synthesis is.
-			FM synthesis is when on		<!-- live reload -->
-			e oscillator modulates another oscillator at a variety of rates to create an infinite amount of timbral variation. 
+			FM synthesis is when one oscillator modulates another oscillator at a variety of rates to create an infinite amount of timbral variation. 
 			This can be seen here:
-		</p>
-		<p>
-			Insert fm gif here
-		</p>
-		<p>
-			It sounds like this
-		</p>
-		<p>
-			Insert fm sound file here
-		</p>
+		</h4>
+	</div>
+	<div class="row">
+		<div class="col">
+			<div class="row" id="pt1">
+				<b>○ Sine Wave Patch Point</b>
+				<br>
+				This outputs a sine wave signal. 
+				Use this to connect the oscillator to the VCA.
+				<div id="s1"><i>▹ Click sine wave patch point</i></div>
+				<div id="s2"><i>▹ Click VCA input patch point</i></div>
+			</div>
+			<div class="row" id="pt2">
+				<b>○ Frequency Knob</b>
+				<br>
+				This will adjust the frequency of the sine wave. Turn this dial to hear and see its effect.
+			</div>
+		</div>
+		<!-- Modulator -->
+		<div class="col" style="padding-left: 10%;">
+			<div class="module">
+				<div class="freqDial" id="mfreq"></div>
+				<div class="ampDial" id="mcv"></div>
+				<img src="{{url_for('static', filename='img/osc.png')}}"/>
+				<button class="sin" id="mSinPoint"></button>
+				<button class="cv" id="mCVPoint"></button>
+			</div>
+			<div id="moscil" style="padding-top: 40px;"></div>
+		</div>
+		<!-- Carrier -->
+		<div class="col">
+			<div class="module">
+				<div class="freqDial" id="cfreq"></div>
+				<div class="ampDial" id='ccv'></div>
+				<img src="{{url_for('static', filename='img/osc.png')}}"/>
+				<button class="sin" id="cSinPoint"></button>
+				<button class="cv" id="cCVPoint"></button>
+			</div>
+			<div id="coscil" style="padding-top: 40px;"></div>
+		</div>
+		<!-- VCA -->
+		<div class="col">
+			<div class="module">
+				<div class="cvAttDial" id="cvAttDial"></div>
+				<div class="baseDial" id="baseDial"></div>
+				<div class="volDial" id='volDial'></div>
+				<img src="{{url_for('static', filename='img/vca.png')}}"/>
+				<button class="in" id="inPoint"></button>
+			</div>
+			<div id="masteroscil" style="padding-top: 40px;"></div>
+		</div>
 	</div>
 	<br>
 	<button id="backButton" class="btn btn-dark">Back</button>

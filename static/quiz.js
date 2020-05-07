@@ -234,11 +234,6 @@ $(document).ready(function(){
   $("#inPoint").click(function() {
     handlePatch("inPoint");
   });
-
-
-  // Maunally Draw Patch Cables
-  // drawCable('mSinPoint','cCVPoint');
-  // drawCable('cSinPoint','inPoint');
 })
 
 // Modulator Oscilloscope
