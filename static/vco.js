@@ -5,7 +5,7 @@ let fill = "#fff8e4ff";
 let red = "#ff5542"
 
 let step = 1;
-var line = null;
+var instructionLine = null;
 
 // Patching
 let firstPoint = "";
@@ -43,7 +43,7 @@ var displayDials = function(){
 		cstate.freq = v;
 		car.freq(v);
 		if (step == 4) {
-			line.remove();
+			instructionLine.remove();
 			$("#nextButton").show();
 			step = 5;
 		}
@@ -117,10 +117,11 @@ var removeCable = function(pt1, pt2) {
 }
 
 var drawCable = function(pt1, pt2) {
-  var startElement = document.getElementById(pt1),
-  endElement = document.getElementById(pt2);
-  var line = new LeaderLine(startElement, endElement, {color: red, size: 6, endPlug: 'behind'});
-}
+	var startElement = document.getElementById(pt1),
+	endElement = document.getElementById(pt2);
+	var line = new LeaderLine(startElement, endElement, {color: red, size: 6, endPlug: 'behind'});
+	cables[pt1+pt2] = line;
+  }
 
 var drawCircle = function(point){
 	$("#"+point).css({"border":"solid","border-color":red});
@@ -195,19 +196,17 @@ $(document).ready(function(){
 
 	var startElement = document.getElementById("s1"),
 	endElement = document.getElementById("cSinPoint");
-	line = new LeaderLine(startElement, endElement, {color: red, size: 6});
-	// let s2line = new LeaderLine(startElement, endElement, {color: red, size: 6});
-	// s2line.remove();
+	instructionLine = new LeaderLine(startElement, endElement, {color: red, size: 6});
 
 	// Patching 	
 	  $("#cSinPoint").click(function() {
 		handlePatch("cSinPoint");
 		if (step < 2){
-			line.remove();
+			instructionLine.remove();
 			$("#s2").show();
 			var startElement = document.getElementById("s2"),
 			endElement = document.getElementById("inPoint");
-			line = new LeaderLine(startElement, endElement, {color: red, size: 6});
+			instructionLine = new LeaderLine(startElement, endElement, {color: red, size: 6});
 			step = 2;
 		}
 	  });
@@ -219,11 +218,11 @@ $(document).ready(function(){
 	  $("#inPoint").click(function() {
 		handlePatch("inPoint");
 		if (step < 3){
-			line.remove();
+			instructionLine.remove();
 			$("#pt2").show();
 			var startElement = document.getElementById("pt2"),
 			endElement = document.getElementById("cfreq");
-			line = new LeaderLine(startElement, endElement, {color: red, size: 6});
+			instructionLine = new LeaderLine(startElement, endElement, {color: red, size: 6});
 			step = 4;
 		}
 	  });
