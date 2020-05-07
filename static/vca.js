@@ -41,6 +41,7 @@ var displayDials = function(){
   vol.on('change',function(v) {
     cstate.amp = v;
     car.amp(v);
+    $("#nextButton").show();
   });
   vol.colorize("accent",accent)
   vol.colorize("fill",fill)
@@ -78,18 +79,20 @@ let c = function(p){
 new p5(c, 'masteroscil');
 
 
-$(document).ready(function(){
+$(document).ready(function(){ 
 	displayDials();
-	drawCable("pt1","inPoint");
+  drawCable("pt1","inPoint");
+
 	var startElement = document.getElementById("pt2"),
 	endElement = document.getElementById("volDial");
-	var line = new LeaderLine(startElement, endElement, {color: red, size: 6});
+  var line = new LeaderLine(startElement, endElement, {color: red, size: 6});
 
 	$("#nextButton").click(function() {
     window.location.href="vco";
-	});
+  });
+  $("#nextButton").hide();
 
 	$("#backButton").click(function() {
     window.location.href="mod";
-	});
+  });
 })
