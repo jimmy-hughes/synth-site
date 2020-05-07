@@ -9,31 +9,27 @@
 
 {% block content %}
 	<br>
-	<div class="text-center">
-		<h2>Frequency Modulation</h2>
-	</div>
-	<br>
+	<h2>Voltage Control Amplifier</h2>
 	<div class="row">
 		<h4>
-			We’re almost ready to patch our synth but before we do that we have to talk about what FM synthesis is.
-			FM synthesis is when one oscillator modulates another oscillator at a variety of rates to create an infinite amount of timbral variation. 
-			This can be seen here:
+			The last step will make use of the <b>control voltage</b> patch point on the oscillator
 		</h4>
 	</div>
 	<div class="row">
 		<div class="col">
 			<div class="row" id="pt1">
-				<b>○ Sine Wave Patch Point</b>
+				<b>○ Control Voltage Patch Point</b>
 				<br>
 				This outputs a sine wave signal. 
 				Use this to connect the oscillator to the VCA.
-				<div id="s1"><i>▹ Click sine wave patch point</i></div>
-				<div id="s2"><i>▹ Click VCA input patch point</i></div>
+				<div class="full-width"><i id="s1">▹ Click sine wave patch point</i></div><br>
+				<div class="full-width"><i id="s2">▹ Click CV patch point</i></div>
 			</div>
 			<div class="row" id="pt2">
-				<b>○ Frequency Knob</b>
-				<br>
-				This will adjust the frequency of the sine wave. Turn this dial to hear and see its effect.
+				<div class="full-width"><b>○ Experiment with Knobs</b></div>
+				<div class="full-width"><i id="s3">▹ modulation frequency</i></div>
+				<div class="full-width"><i id="s4">▹ modulation depth</i></div>
+				<div class="full-width"><i id="s5">▹ carrier frequency</i></div>
 			</div>
 		</div>
 		<!-- Modulator -->

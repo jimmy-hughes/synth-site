@@ -35,7 +35,7 @@ mod.amp(mstate.amp);
 let car = new p5.Oscillator('sine');
 cstate = {
   freq: 300,
-  amp: 0.8,
+  amp: 0,
   mute: true,
   minf: 100,
   maxf: 1000,
@@ -243,6 +243,10 @@ $(document).ready(function(){
   $("#backButton").click(function() {
 	window.location.href="vco";
   });
+
+  // Manually patch osc -> vca
+  handlePatch("cSinPoint");
+  handlePatch("inPoint");
 })
 
 $(document).ready(function(){

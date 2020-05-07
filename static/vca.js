@@ -4,6 +4,10 @@ let fill = "#fff8e4ff";
 // Cable colors
 let red = "#ff5542"
 
+var line1 = null;
+var line = null;
+var linesHidden = false;
+
 let car = new p5.Oscillator('sine');
 cstate = {
   freq: 300,
@@ -17,6 +21,12 @@ cstate = {
 car.freq(cstate.freq);
 car.amp(cstate.amp);
 car.start();
+
+var drawCable = function(pt1, pt2) {
+  startElement = document.getElementById(pt1),
+  endElement = document.getElementById(pt2);
+  line = new LeaderLine(startElement, endElement, {color: red, size: 6, endPlug: 'behind'});
+}
 
 var displayDials = function(){
   // VCA Dials
@@ -42,15 +52,15 @@ var displayDials = function(){
     cstate.amp = v;
     car.amp(v);
     $("#nextButton").show();
+    if (!linesHidden){
+      line.remove();
+      line1.remove();
+      drawCable("pt1","inPoint")
+      linesHidden = true;
+    }
   });
   vol.colorize("accent",accent)
   vol.colorize("fill",fill)
-}
-
-var drawCable = function(pt1, pt2) {
-  var startElement = document.getElementById(pt1),
-  endElement = document.getElementById(pt2);
-  var line = new LeaderLine(startElement, endElement, {color: red, size: 6, endPlug: 'behind'});
 }
 
 // Master Oscilloscope
@@ -81,11 +91,13 @@ new p5(c, 'masteroscil');
 
 $(document).ready(function(){ 
 	displayDials();
-  drawCable("pt1","inPoint");
+  startElement = document.getElementById("pt1"),
+	endElement = document.getElementById("inPoint");
+  line1 = new LeaderLine(startElement, endElement, {color: red, size: 6});
 
-	var startElement = document.getElementById("pt2"),
+	startElement = document.getElementById("pt2"),
 	endElement = document.getElementById("volDial");
-  var line = new LeaderLine(startElement, endElement, {color: red, size: 6});
+  line = new LeaderLine(startElement, endElement, {color: red, size: 6});
 
 	$("#nextButton").click(function() {
     window.location.href="vco";
