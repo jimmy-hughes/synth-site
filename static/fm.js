@@ -22,7 +22,7 @@ let cables = {};
 let mod = new p5.Oscillator('sine');
 mstate = {
   freq: 20,
-  amp: 115,
+  amp: 0,
   mute: true,
   minf: 1,
   maxf: 100,
