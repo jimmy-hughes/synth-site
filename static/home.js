@@ -62,8 +62,8 @@ let c = function(p){
     waveform = analyzer.waveform();
     // draw the shape of the waveform
     p.stroke(red);
-	p.strokeWeight(5);
-	p.rect(0,0,p.width,p.height,10);
+	  p.strokeWeight(5);
+	  p.rect(0,0,p.width,p.height,10);
     p.beginShape();
     for (let i = 0; i < waveform.length; i++) {
       let x = p.map(i, 0, waveform.length, 0, p.width);
