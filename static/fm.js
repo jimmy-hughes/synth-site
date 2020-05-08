@@ -1,7 +1,3 @@
-// todo: 
-//       change to noLoop() and redraw() only when freq or modulation changes?
-//       display output using math instead of fft?
-
 // Nexus colors
 let accent = "#0057ffff";
 let fill = "#fff8e4ff";
