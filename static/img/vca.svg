@@ -11,8 +11,8 @@
    viewBox="0 0 128.57 192.86"
    version="1.1"
    id="svg70"
-   sodipodi:docname="osc.svg"
-   inkscape:export-filename="/home/jimmy/Documents/repos/synth-site/osc.png"
+   sodipodi:docname="vca.svg"
+   inkscape:export-filename="/home/jimmy/Documents/repos/synth-site/vca.png"
    inkscape:export-xdpi="163.83652"
    inkscape:export-ydpi="163.83652"
    inkscape:version="0.92.4 (fd57863, 2020-04-02)">
@@ -41,9 +41,9 @@
      inkscape:window-height="1025"
      id="namedview72"
      showgrid="false"
-     inkscape:zoom="9.7894849"
-     inkscape:cx="74.975353"
-     inkscape:cy="143.27514"
+     inkscape:zoom="2.4473712"
+     inkscape:cx="-64.434466"
+     inkscape:cy="133.41664"
      inkscape:window-x="0"
      inkscape:window-y="27"
      inkscape:window-maximized="1"
@@ -123,18 +123,6 @@
     <g
        id="Layer_1-2"
        data-name="Layer 1">
-      <text
-         class="cls-8"
-         id="text52-1"
-         style="font-size:8px;font-family:EurostileCon-Reg, 'Eurostile Cond';opacity:1;fill:#0057ff;fill-opacity:1;stroke:#0057ff;stroke-opacity:1"
-         x="55.066666"
-         y="77.210335"
-         inkscape:export-xdpi="163.83701"
-         inkscape:export-ydpi="163.83701">
-        <tspan
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.33333397px;font-family:'Ubuntu Mono';-inkscape-font-specification:'Ubuntu Mono';fill:#0057ff;fill-opacity:1;stroke:#0057ff;stroke-opacity:1"
-           id="tspan3830-8">FREQ</tspan>
-      </text>
       <path
          class="cls-1"
          d="M80.8,7.68h33.49a8,8,0,0,1,8,8V177.79a8,8,0,0,1-8,8H15a8,8,0,0,1-8-8V15.68a8,8,0,0,1,8-8H48.8"
@@ -142,106 +130,142 @@
          style="stroke-width:1.9;stroke-miterlimit:10;stroke-dasharray:none;fill:none;fill-opacity:1;stroke:#fff000;stroke-opacity:1" />
       <polygon
          class="cls-3"
-         points="85.26,165.57 96.98,165.57 102.85,155.42 96.98,145.26 85.26,145.26 79.4,155.42 "
+         points="96.98,165.57 102.85,155.42 96.98,145.26 85.26,145.26 79.4,155.42 85.26,165.57 "
          id="polygon24"
-         style="fill:#a3a3a3;fill-opacity:0.68235296"
-         transform="translate(0,-6)" />
+         style="fill:#a3a3a3;fill-opacity:0.68235294"
+         transform="translate(0,-124)" />
       <circle
          class="cls-4"
          cx="91.120003"
-         cy="149.42"
+         cy="31.419998"
          r="7.0300002"
          id="circle26"
          style="stroke:#ffffff;stroke-width:2px;stroke-miterlimit:10" />
       <polygon
          class="cls-5"
-         points="31.59,165.57 43.31,165.57 49.17,155.42 43.31,145.26 31.59,145.26 25.73,155.42 "
+         points="43.31,165.57 49.17,155.42 43.31,145.26 31.59,145.26 25.73,155.42 31.59,165.57 "
          id="polygon28"
-         style="fill:#a3a3a3;fill-opacity:0.68235296"
-         transform="translate(0,-6)" />
+         style="fill:#a3a3a3;fill-opacity:0.68235294"
+         transform="translate(0,-124)" />
       <circle
          class="cls-4"
          cx="37.450001"
-         cy="149.42"
+         cy="31.419998"
          r="7.0300002"
          id="circle30"
-         style="stroke:#ffffff;stroke-width:2px;stroke-miterlimit:10" />
-      <polygon
-         class="cls-6"
-         points="85.26,117.16 96.98,117.16 102.85,107.01 96.98,96.86 85.26,96.86 79.4,107.01 "
-         id="polygon32"
-         style="fill:#a3a3a3;fill-opacity:0.68075114"
-         transform="translate(0,-6)" />
-      <circle
-         class="cls-4"
-         cx="91.120003"
-         cy="101.01"
-         r="7.0300002"
-         id="circle34"
          style="stroke:#ffffff;stroke-width:2px;stroke-miterlimit:10" />
       <text
          class="cls-8"
          id="text52"
-         style="font-size:8px;font-family:EurostileCon-Reg, 'Eurostile Cond';fill:#0057ff;stroke:#0057ff;stroke-opacity:1;opacity:1;fill-opacity:1;"
+         style="font-size:8px;font-family:EurostileCon-Reg, 'Eurostile Cond';opacity:1;fill:#0057ff;fill-opacity:1;stroke:#0057ff;stroke-opacity:1"
          x="56.663498"
          y="11.23">
         <tspan
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.66666698px;font-family:'Ubuntu Mono';-inkscape-font-specification:'Ubuntu Mono';stroke:#0057ff;stroke-opacity:1;fill:#0057ff;fill-opacity:1;"
-           id="tspan3830">OSC</tspan>
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.66666698px;font-family:'Ubuntu Mono';-inkscape-font-specification:'Ubuntu Mono';fill:#0057ff;fill-opacity:1;stroke:#0057ff;stroke-opacity:1"
+           id="tspan3830">VCA</tspan>
       </text>
-      <line
-         class="cls-1"
-         x1="37.450001"
-         y1="120.55"
-         x2="37.450001"
-         y2="132.82001"
-         id="line64"
-         style="opacity:1;fill:#0057ff;fill-opacity:1;stroke:#0057ff;stroke-width:1.60000002;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1" />
-      <polygon
-         class="cls-2"
-         points="41.54,135.87 37.45,131.47 33.36,135.87 34.09,136.55 37.45,132.94 40.8,136.55 "
-         id="polygon66"
-         transform="translate(0,-12)"
-         style="fill:#0057ff;fill-opacity:1;stroke:#0057ff;stroke-width:0.60000002;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1" />
       <rect
          class="cls-2"
-         x="79.534622"
-         y="164.28677"
+         x="79.330322"
+         y="45.257202"
          width="23.315374"
          height="13.739251"
          rx="1.8833097"
          id="rect40-3"
-         style="fill:#0057ff;fill-opacity:1;stroke-width:1.0919745" />
-      <rect
-         class="cls-2"
-         x="79.597672"
-         y="118.65488"
-         width="23.315374"
-         height="13.739251"
-         rx="1.8833097"
-         id="rect40-3-7"
          style="fill:#0057ff;fill-opacity:1;stroke-width:1.0919745" />
       <text
          class="cls-8"
          id="text52-8"
          style="font-size:8px;font-family:EurostileCon-Reg, 'Eurostile Cond';opacity:1;fill:#0057ff;fill-opacity:1;stroke:#0057ff;stroke-opacity:1"
          x="32.485695"
-         y="172.8087">
+         y="54.808701">
         <tspan
            style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.33333302px;font-family:'Ubuntu Mono';-inkscape-font-specification:'Ubuntu Mono';fill:#0057ff;fill-opacity:1;stroke:#0057ff;stroke-opacity:1"
-           id="tspan3830-7">CV</tspan>
+           id="tspan3830-7">IN</tspan>
       </text>
-      <path
-         style="fill:none;stroke:#ffffff;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         d="m 83.559047,125.68803 c 0,0 4.188167,-7.86558 7.865582,0 3.677416,7.86558 7.559132,-0.51075 7.559132,-0.51075"
-         id="path4696"
-         inkscape:connector-curvature="0" />
-      <path
-         style="fill:none;stroke:#f9f9f9;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         d="m 83.643796,172.49079 3.900488,-5.27289 7.634038,8.59552 3.39487,-4.33387"
-         id="path4700"
-         inkscape:connector-curvature="0"
-         sodipodi:nodetypes="cccc" />
+      <polygon
+         class="cls-5"
+         points="43.31,145.26 31.59,145.26 25.73,155.42 31.59,165.57 43.31,165.57 49.17,155.42 "
+         id="polygon28-3"
+         style="fill:#a3a3a3;fill-opacity:0.68235294"
+         transform="translate(-0.092023,-66.86251)" />
+      <circle
+         class="cls-4"
+         cx="37.357979"
+         cy="88.557487"
+         r="7.0300002"
+         id="circle30-6"
+         style="stroke:#ffffff;stroke-width:2px;stroke-miterlimit:10" />
+      <text
+         class="cls-8"
+         id="text52-8-7"
+         style="font-size:8px;font-family:EurostileCon-Reg, 'Eurostile Cond';opacity:1;fill:#0057ff;fill-opacity:1;stroke:#0057ff;stroke-opacity:1"
+         x="26.393673"
+         y="117.9462">
+        <tspan
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.33333302px;font-family:'Ubuntu Mono';-inkscape-font-specification:'Ubuntu Mono';fill:#0057ff;fill-opacity:1;stroke:#0057ff;stroke-opacity:1"
+           id="tspan3830-7-5">CV</tspan>
+      </text>
+      <text
+         class="cls-8"
+         id="text52-8-7-3"
+         style="font-size:8px;font-family:EurostileCon-Reg, 'Eurostile Cond';opacity:1;fill:#0057ff;fill-opacity:1;stroke:#0057ff;stroke-opacity:1"
+         x="38.373764"
+         y="117.99638">
+        <tspan
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.33333302px;font-family:'Ubuntu Mono';-inkscape-font-specification:'Ubuntu Mono';fill:#0057ff;fill-opacity:1;stroke:#0057ff;stroke-opacity:1"
+           id="tspan3830-7-5-5">IN</tspan>
+      </text>
+      <text
+         class="cls-8"
+         id="text52-8-6"
+         style="font-size:8px;font-family:EurostileCon-Reg, 'Eurostile Cond';opacity:1;fill:none;fill-opacity:1;stroke:#0057ff;stroke-opacity:1"
+         x="84.321167"
+         y="54.862923">
+        <tspan
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.33333302px;font-family:'Ubuntu Mono';-inkscape-font-specification:'Ubuntu Mono';fill:none;fill-opacity:1;stroke:#ffffff;stroke-opacity:1"
+           id="tspan3830-7-2">OUT</tspan>
+      </text>
+      <text
+         class="cls-8"
+         id="text52-8-7-9"
+         style="font-size:8px;font-family:EurostileCon-Reg, 'Eurostile Cond';opacity:1;fill:#0057ff;fill-opacity:1;stroke:#0057ff;stroke-opacity:1"
+         x="78.499664"
+         y="117.99467">
+        <tspan
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.33333302px;font-family:'Ubuntu Mono';-inkscape-font-specification:'Ubuntu Mono';fill:#0057ff;fill-opacity:1;stroke:#0057ff;stroke-opacity:1"
+           id="tspan3830-7-5-1">CV</tspan>
+      </text>
+      <text
+         class="cls-8"
+         id="text52-8-7-3-2"
+         style="font-size:8px;font-family:EurostileCon-Reg, 'Eurostile Cond';opacity:1;fill:#0057ff;fill-opacity:1;stroke:#0057ff;stroke-opacity:1"
+         x="90.479752"
+         y="118.04483">
+        <tspan
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.33333302px;font-family:'Ubuntu Mono';-inkscape-font-specification:'Ubuntu Mono';fill:#0057ff;fill-opacity:1;stroke:#0057ff;stroke-opacity:1"
+           id="tspan3830-7-5-5-7">ATT</tspan>
+      </text>
+      <text
+         class="cls-8"
+         id="text52-8-7-0"
+         style="font-size:8px;font-family:EurostileCon-Reg, 'Eurostile Cond';opacity:1;fill:#0057ff;fill-opacity:1;stroke:#0057ff;stroke-opacity:1"
+         x="27.778999"
+         y="176.37424">
+        <tspan
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.33333302px;font-family:'Ubuntu Mono';-inkscape-font-specification:'Ubuntu Mono';fill:#0057ff;fill-opacity:1;stroke:#0057ff;stroke-opacity:1"
+           id="tspan3830-7-5-9">BASE</tspan>
+      </text>
+      <text
+         class="cls-8"
+         id="text52-8-7-9-0"
+         style="font-size:8px;font-family:EurostileCon-Reg, 'Eurostile Cond';opacity:1;fill:#0057ff;fill-opacity:1;stroke:#0057ff;stroke-opacity:1"
+         x="85.08567"
+         y="176.4227">
+        <tspan
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.33333302px;font-family:'Ubuntu Mono';-inkscape-font-specification:'Ubuntu Mono';fill:#0057ff;fill-opacity:1;stroke:#0057ff;stroke-opacity:1"
+           id="tspan3830-7-5-1-6">VOL</tspan>
+      </text>
     </g>
   </g>
 </svg>

@@ -8,14 +8,14 @@
    xmlns:xlink="http://www.w3.org/1999/xlink"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   viewBox="0 0 128.57 192.86"
-   version="1.1"
-   id="svg70"
-   sodipodi:docname="osc.svg"
+   inkscape:version="1.0 (6e3e5246a0, 2020-05-07)"
+   inkscape:export-ydpi="491.65576"
+   inkscape:export-xdpi="491.65576"
    inkscape:export-filename="/home/jimmy/Documents/repos/synth-site/osc.png"
-   inkscape:export-xdpi="163.83652"
-   inkscape:export-ydpi="163.83652"
-   inkscape:version="0.92.4 (fd57863, 2020-04-02)">
+   sodipodi:docname="osc.svg"
+   id="svg70"
+   version="1.1"
+   viewBox="0 0 128.57 192.86">
   <metadata
      id="metadata74">
     <rdf:RDF>
@@ -24,224 +24,219 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
   <sodipodi:namedview
-     pagecolor="#ffffff"
-     bordercolor="#666666"
-     borderopacity="1"
-     objecttolerance="10"
-     gridtolerance="10"
-     guidetolerance="10"
-     inkscape:pageopacity="1"
-     inkscape:pageshadow="2"
-     inkscape:window-width="1920"
-     inkscape:window-height="1025"
-     id="namedview72"
-     showgrid="false"
-     inkscape:zoom="9.7894849"
-     inkscape:cx="74.975353"
+     inkscape:document-rotation="0"
+     inkscape:current-layer="Layer_1-2"
+     inkscape:window-maximized="0"
+     inkscape:window-y="114"
+     inkscape:window-x="50"
      inkscape:cy="143.27514"
-     inkscape:window-x="0"
-     inkscape:window-y="27"
-     inkscape:window-maximized="1"
-     inkscape:current-layer="Layer_1-2" />
+     inkscape:cx="74.975353"
+     inkscape:zoom="9.7894849"
+     showgrid="false"
+     id="namedview72"
+     inkscape:window-height="759"
+     inkscape:window-width="1424"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="1"
+     guidetolerance="10"
+     gridtolerance="10"
+     objecttolerance="10"
+     borderopacity="1"
+     bordercolor="#666666"
+     pagecolor="#f0ead6" />
   <defs
      id="defs14">
     <linearGradient
-       inkscape:collect="always"
-       id="linearGradient4641">
+       id="linearGradient4641"
+       inkscape:collect="always">
       <stop
-         style="stop-color:#0015ff;stop-opacity:1;"
+         id="stop4637"
          offset="0"
-         id="stop4637" />
+         style="stop-color:#0015ff;stop-opacity:1;" />
       <stop
-         style="stop-color:#0015ff;stop-opacity:0;"
+         id="stop4639"
          offset="1"
-         id="stop4639" />
+         style="stop-color:#0015ff;stop-opacity:0;" />
     </linearGradient>
     <style
        id="style2">.cls-1{fill:none;}.cls-1,.cls-4{stroke:#fff;stroke-miterlimit:10;}.cls-2,.cls-8{fill:#fff;}.cls-3{fill:url(#linear-gradient);}.cls-4{stroke-width:2px;}.cls-5{fill:url(#linear-gradient-2);}.cls-6{fill:url(#linear-gradient-3);}.cls-7{fill:url(#linear-gradient-4);}.cls-8{font-size:8px;font-family:EurostileCon-Reg, Eurostile Cond;}.cls-9{letter-spacing:0em;}.cls-10{letter-spacing:0.01em;}</style>
     <linearGradient
-       id="linear-gradient"
-       x1="83.2"
-       y1="149.93"
-       x2="102.47"
+       gradientUnits="userSpaceOnUse"
        y2="163.28"
-       gradientUnits="userSpaceOnUse">
+       x2="102.47"
+       y1="149.93"
+       x1="83.2"
+       id="linear-gradient">
       <stop
-         offset="0.06"
+         id="stop4"
          stop-color="#a3a5a8"
-         id="stop4" />
+         offset="0.06" />
       <stop
-         offset="0.28"
+         id="stop6"
          stop-color="#e6e7e8"
-         id="stop6" />
+         offset="0.28" />
       <stop
-         offset="1"
+         id="stop8"
          stop-color="#5d5e61"
-         id="stop8" />
+         offset="1" />
     </linearGradient>
     <linearGradient
-       id="linear-gradient-2"
-       x1="29.53"
-       y1="149.93"
-       x2="48.8"
+       xlink:href="#linear-gradient"
        y2="163.28"
-       xlink:href="#linear-gradient" />
-    <linearGradient
-       id="linear-gradient-3"
-       x1="83.2"
-       y1="101.52"
-       x2="102.47"
-       y2="114.87"
-       xlink:href="#linear-gradient" />
-    <linearGradient
-       id="linear-gradient-4"
-       x1="29.53"
-       y1="101.52"
        x2="48.8"
+       y1="149.93"
+       x1="29.53"
+       id="linear-gradient-2" />
+    <linearGradient
+       xlink:href="#linear-gradient"
        y2="114.87"
-       xlink:href="#linear-gradient" />
+       x2="102.47"
+       y1="101.52"
+       x1="83.2"
+       id="linear-gradient-3" />
+    <linearGradient
+       xlink:href="#linear-gradient"
+       y2="114.87"
+       x2="48.8"
+       y1="101.52"
+       x1="29.53"
+       id="linear-gradient-4" />
     <radialGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient4641"
-       id="radialGradient4645"
-       cx="64.642166"
-       cy="7.9233327"
-       fx="64.642166"
-       fy="7.9233327"
-       r="8.1906672"
+       gradientUnits="userSpaceOnUse"
        gradientTransform="matrix(1,0,0,0.48168647,0,4.1067706)"
-       gradientUnits="userSpaceOnUse" />
+       r="8.1906672"
+       fy="7.9233327"
+       fx="64.642166"
+       cy="7.9233327"
+       cx="64.642166"
+       id="radialGradient4645"
+       xlink:href="#linearGradient4641"
+       inkscape:collect="always" />
   </defs>
   <g
-     id="Layer_2"
-     data-name="Layer 2">
+     data-name="Layer 2"
+     id="Layer_2">
     <g
-       id="Layer_1-2"
-       data-name="Layer 1">
+       data-name="Layer 1"
+       id="Layer_1-2">
       <text
-         class="cls-8"
-         id="text52-1"
-         style="font-size:8px;font-family:EurostileCon-Reg, 'Eurostile Cond';opacity:1;fill:#0057ff;fill-opacity:1;stroke:#0057ff;stroke-opacity:1"
-         x="55.066666"
-         y="77.210335"
+         inkscape:export-ydpi="163.83701"
          inkscape:export-xdpi="163.83701"
-         inkscape:export-ydpi="163.83701">
-        <tspan
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.33333397px;font-family:'Ubuntu Mono';-inkscape-font-specification:'Ubuntu Mono';fill:#0057ff;fill-opacity:1;stroke:#0057ff;stroke-opacity:1"
-           id="tspan3830-8">FREQ</tspan>
-      </text>
-      <path
-         class="cls-1"
-         d="M80.8,7.68h33.49a8,8,0,0,1,8,8V177.79a8,8,0,0,1-8,8H15a8,8,0,0,1-8-8V15.68a8,8,0,0,1,8-8H48.8"
-         id="path18"
-         style="stroke-width:1.9;stroke-miterlimit:10;stroke-dasharray:none;fill:none;fill-opacity:1;stroke:#fff000;stroke-opacity:1" />
-      <polygon
-         class="cls-3"
-         points="85.26,165.57 96.98,165.57 102.85,155.42 96.98,145.26 85.26,145.26 79.4,155.42 "
-         id="polygon24"
-         style="fill:#a3a3a3;fill-opacity:0.68235296"
-         transform="translate(0,-6)" />
-      <circle
-         class="cls-4"
-         cx="91.120003"
-         cy="149.42"
-         r="7.0300002"
-         id="circle26"
-         style="stroke:#ffffff;stroke-width:2px;stroke-miterlimit:10" />
-      <polygon
-         class="cls-5"
-         points="31.59,165.57 43.31,165.57 49.17,155.42 43.31,145.26 31.59,145.26 25.73,155.42 "
-         id="polygon28"
-         style="fill:#a3a3a3;fill-opacity:0.68235296"
-         transform="translate(0,-6)" />
-      <circle
-         class="cls-4"
-         cx="37.450001"
-         cy="149.42"
-         r="7.0300002"
-         id="circle30"
-         style="stroke:#ffffff;stroke-width:2px;stroke-miterlimit:10" />
-      <polygon
-         class="cls-6"
-         points="85.26,117.16 96.98,117.16 102.85,107.01 96.98,96.86 85.26,96.86 79.4,107.01 "
-         id="polygon32"
-         style="fill:#a3a3a3;fill-opacity:0.68075114"
-         transform="translate(0,-6)" />
-      <circle
-         class="cls-4"
-         cx="91.120003"
-         cy="101.01"
-         r="7.0300002"
-         id="circle34"
-         style="stroke:#ffffff;stroke-width:2px;stroke-miterlimit:10" />
-      <text
-         class="cls-8"
-         id="text52"
-         style="font-size:8px;font-family:EurostileCon-Reg, 'Eurostile Cond';fill:#0057ff;stroke:#0057ff;stroke-opacity:1;opacity:1;fill-opacity:1;"
-         x="56.663498"
-         y="11.23">
-        <tspan
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.66666698px;font-family:'Ubuntu Mono';-inkscape-font-specification:'Ubuntu Mono';stroke:#0057ff;stroke-opacity:1;fill:#0057ff;fill-opacity:1;"
-           id="tspan3830">OSC</tspan>
-      </text>
-      <line
-         class="cls-1"
-         x1="37.450001"
-         y1="120.55"
-         x2="37.450001"
-         y2="132.82001"
-         id="line64"
-         style="opacity:1;fill:#0057ff;fill-opacity:1;stroke:#0057ff;stroke-width:1.60000002;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1" />
-      <polygon
-         class="cls-2"
-         points="41.54,135.87 37.45,131.47 33.36,135.87 34.09,136.55 37.45,132.94 40.8,136.55 "
-         id="polygon66"
-         transform="translate(0,-12)"
-         style="fill:#0057ff;fill-opacity:1;stroke:#0057ff;stroke-width:0.60000002;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1" />
-      <rect
-         class="cls-2"
-         x="79.534622"
-         y="164.28677"
-         width="23.315374"
-         height="13.739251"
-         rx="1.8833097"
-         id="rect40-3"
-         style="fill:#0057ff;fill-opacity:1;stroke-width:1.0919745" />
-      <rect
-         class="cls-2"
-         x="79.597672"
-         y="118.65488"
-         width="23.315374"
-         height="13.739251"
-         rx="1.8833097"
-         id="rect40-3-7"
-         style="fill:#0057ff;fill-opacity:1;stroke-width:1.0919745" />
-      <text
-         class="cls-8"
-         id="text52-8"
+         y="77.210335"
+         x="55.066666"
          style="font-size:8px;font-family:EurostileCon-Reg, 'Eurostile Cond';opacity:1;fill:#0057ff;fill-opacity:1;stroke:#0057ff;stroke-opacity:1"
+         id="text52-1"
+         class="cls-8"><tspan
+           id="tspan3830-8"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.33333px;font-family:'Ubuntu Mono';-inkscape-font-specification:'Ubuntu Mono';fill:#0057ff;fill-opacity:1;stroke:#0057ff;stroke-opacity:1">FREQ</tspan></text>
+      <path
+         style="stroke-width:1.9;stroke-miterlimit:10;stroke-dasharray:none;fill:none;fill-opacity:1;stroke:#fff000;stroke-opacity:1"
+         id="path18"
+         d="M80.8,7.68h33.49a8,8,0,0,1,8,8V177.79a8,8,0,0,1-8,8H15a8,8,0,0,1-8-8V15.68a8,8,0,0,1,8-8H48.8"
+         class="cls-1" />
+      <polygon
+         transform="translate(0,-6)"
+         style="fill:#a3a3a3;fill-opacity:0.68235296"
+         id="polygon24"
+         points="85.26,165.57 96.98,165.57 102.85,155.42 96.98,145.26 85.26,145.26 79.4,155.42 "
+         class="cls-3" />
+      <circle
+         style="stroke:#ffffff;stroke-width:2px;stroke-miterlimit:10"
+         id="circle26"
+         r="7.0300002"
+         cy="149.42"
+         cx="91.120003"
+         class="cls-4" />
+      <polygon
+         transform="translate(0,-6)"
+         style="fill:#a3a3a3;fill-opacity:0.68235296"
+         id="polygon28"
+         points="31.59,165.57 43.31,165.57 49.17,155.42 43.31,145.26 31.59,145.26 25.73,155.42 "
+         class="cls-5" />
+      <circle
+         style="stroke:#ffffff;stroke-width:2px;stroke-miterlimit:10"
+         id="circle30"
+         r="7.0300002"
+         cy="149.42"
+         cx="37.450001"
+         class="cls-4" />
+      <polygon
+         transform="translate(0,-6)"
+         style="fill:#a3a3a3;fill-opacity:0.68075114"
+         id="polygon32"
+         points="85.26,117.16 96.98,117.16 102.85,107.01 96.98,96.86 85.26,96.86 79.4,107.01 "
+         class="cls-6" />
+      <circle
+         style="stroke:#ffffff;stroke-width:2px;stroke-miterlimit:10"
+         id="circle34"
+         r="7.0300002"
+         cy="101.01"
+         cx="91.120003"
+         class="cls-4" />
+      <text
+         y="11.23"
+         x="56.663498"
+         style="font-size:8px;font-family:EurostileCon-Reg, 'Eurostile Cond';opacity:1;fill:#0057ff;fill-opacity:1;stroke:#0057ff;stroke-opacity:1"
+         id="text52"
+         class="cls-8"><tspan
+           id="tspan3830"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.6667px;font-family:'Ubuntu Mono';-inkscape-font-specification:'Ubuntu Mono';fill:#0057ff;fill-opacity:1;stroke:#0057ff;stroke-opacity:1">OSC</tspan></text>
+      <line
+         style="opacity:1;fill:#0057ff;fill-opacity:1;stroke:#0057ff;stroke-width:1.60000002;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+         id="line64"
+         y2="132.82001"
+         x2="37.450001"
+         y1="120.55"
+         x1="37.450001"
+         class="cls-1" />
+      <polygon
+         style="fill:#0057ff;fill-opacity:1;stroke:#0057ff;stroke-width:0.60000002;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+         transform="translate(0,-12)"
+         id="polygon66"
+         points="41.54,135.87 37.45,131.47 33.36,135.87 34.09,136.55 37.45,132.94 40.8,136.55 "
+         class="cls-2" />
+      <rect
+         style="fill:#0057ff;fill-opacity:1;stroke-width:1.0919745"
+         id="rect40-3"
+         rx="1.8833097"
+         height="13.739251"
+         width="23.315374"
+         y="164.28677"
+         x="79.534622"
+         class="cls-2" />
+      <rect
+         style="fill:#0057ff;fill-opacity:1;stroke-width:1.0919745"
+         id="rect40-3-7"
+         rx="1.8833097"
+         height="13.739251"
+         width="23.315374"
+         y="118.65488"
+         x="79.597672"
+         class="cls-2" />
+      <text
+         y="172.8087"
          x="32.485695"
-         y="172.8087">
-        <tspan
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.33333302px;font-family:'Ubuntu Mono';-inkscape-font-specification:'Ubuntu Mono';fill:#0057ff;fill-opacity:1;stroke:#0057ff;stroke-opacity:1"
-           id="tspan3830-7">CV</tspan>
-      </text>
+         style="font-size:8px;font-family:EurostileCon-Reg, 'Eurostile Cond';opacity:1;fill:#0057ff;fill-opacity:1;stroke:#0057ff;stroke-opacity:1"
+         id="text52-8"
+         class="cls-8"><tspan
+           id="tspan3830-7"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.33333px;font-family:'Ubuntu Mono';-inkscape-font-specification:'Ubuntu Mono';fill:#0057ff;fill-opacity:1;stroke:#0057ff;stroke-opacity:1">CV</tspan></text>
       <path
-         style="fill:none;stroke:#ffffff;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         d="m 83.559047,125.68803 c 0,0 4.188167,-7.86558 7.865582,0 3.677416,7.86558 7.559132,-0.51075 7.559132,-0.51075"
-         id="path4696"
-         inkscape:connector-curvature="0" />
-      <path
-         style="fill:none;stroke:#f9f9f9;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         d="m 83.643796,172.49079 3.900488,-5.27289 7.634038,8.59552 3.39487,-4.33387"
-         id="path4700"
          inkscape:connector-curvature="0"
-         sodipodi:nodetypes="cccc" />
+         id="path4696"
+         d="m 83.559047,125.68803 c 0,0 4.188167,-7.86558 7.865582,0 3.677416,7.86558 7.559132,-0.51075 7.559132,-0.51075"
+         style="fill:none;stroke:#ffffff;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+      <path
+         sodipodi:nodetypes="cccc"
+         inkscape:connector-curvature="0"
+         id="path4700"
+         d="m 83.643796,172.49079 3.900488,-5.27289 7.634038,8.59552 3.39487,-4.33387"
+         style="fill:none;stroke:#f9f9f9;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
     </g>
   </g>
 </svg>
