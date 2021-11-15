@@ -1,5 +1,7 @@
 # sythn-site
-synthesizer tutorial project for coms 4170
+## Overview
+This is an interactive interface designed for teaching the basic of modular synthesis.
 
+## Current state
 For best performance run on Firefox.
-Certain functionality is lost on Safari and Chrome.
+Certain formating can be lost on Safari and Chrome.
