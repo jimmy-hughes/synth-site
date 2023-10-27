@@ -26,14 +26,18 @@ cstate = {
 car.freq(cstate.freq);
 car.amp(cstate.amp);
 
-car.start();
-mod.start();
-mod.disconnect();
-car.freq(mod);
-car.amp(0);
+// car.start();
+// mod.start();
+// mod.disconnect();
+// car.freq(mod);
+// car.amp(0);
 
 $(document).ready(function(){
 	$("#masteroscil").mousedown(function() {
+    car.start();
+    mod.start();
+    mod.disconnect();
+    car.freq(mod);
 		car.amp(0.8, 0.1);
 		$("#tutorialButton").show(100000000);
 	});

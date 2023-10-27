@@ -20,7 +20,6 @@ cstate = {
 }
 car.freq(cstate.freq);
 car.amp(cstate.amp);
-car.start();
 
 var drawCable = function(pt1, pt2) {
   startElement = document.getElementById(pt1),
@@ -53,6 +52,7 @@ var displayDials = function(){
     car.amp(v);
     $("#nextButton").show();
     if (!linesHidden){
+      car.start();
       line.remove();
       line1.remove();
       drawCable("pt1","inPoint")
